@@ -198,5 +198,6 @@ def big_shoe_rebounds
   game_hash.each do |place, team|
     team.each do |attribute, data|
       if data.class == Hash
-        
+        data.each do |player, stats|
+          
 end
