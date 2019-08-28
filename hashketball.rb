@@ -202,5 +202,6 @@ def big_shoe_rebounds
           stats.each do |stat, int|
               if stat == :shoe
                 if int > shoe_size
-                  
+                  shoe_size = int
+                  player_name = player
 end
