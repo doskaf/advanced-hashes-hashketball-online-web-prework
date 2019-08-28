@@ -214,6 +214,6 @@ def most_points_scored
   game_hash.each do |place, team|
     team[:players].each do |player, stats|
       mvp ||= stats
-      mvp = stats if stats[:stats][:points] > max_player[:stats][:points]
+      mvp = stats if stats[:points] > mvp[:points]
   end
 end
