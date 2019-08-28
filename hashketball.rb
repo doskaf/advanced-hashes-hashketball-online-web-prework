@@ -199,5 +199,8 @@ def big_shoe_rebounds
     team.each do |attribute, data|
       if data.class == Hash
         data.each do |player, stats|
-          
+          stats.each do |stat, int|
+              if stat == :shoe
+                if int > shoe_size
+                  
 end
