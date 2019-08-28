@@ -217,5 +217,4 @@ def most_points_scored
       mvp = stats if stats[:points] > mvp[:points]
     end
   end
-  end
 end
