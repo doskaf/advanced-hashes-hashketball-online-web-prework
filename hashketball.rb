@@ -232,7 +232,7 @@ def winning_team
     team[:players].each do |player|
       points = player[:points]
       all_points << points
-      if all_points > most_points
+      if all_points.sum > most_points
         most_points = all_points
         best_team = team[:team_name]
       end
