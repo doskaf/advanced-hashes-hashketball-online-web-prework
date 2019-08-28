@@ -226,16 +226,14 @@ end
 
 def winning_team
   best_team = nil
-  game.each do |place, team|
+  game_hash.each do |place, team|
     sum = 0
     team[:players].each do |player, stats|
       sum += stats[:points]
     end
-
     team[:sum] = sum
     best_team ||= team
     best_team = team if team[:sum] > best_team_team[:sum]
   end
-
   best_team[:team_name]
 end
