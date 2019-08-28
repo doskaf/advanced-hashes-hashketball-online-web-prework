@@ -194,7 +194,7 @@ end
 
 def big_shoe_rebounds
   player_name = ""
-  
+  shoe_size = 0
   game_hash.each do |place, team|
     team.each do |attribute, data|
       if attribute == :players
