@@ -210,8 +210,10 @@ end
 #bonus
 
 def most_points_scored
+  most_points = 0
+  mvp = ""
   game_hash.each do |place, team|
     team[:players].each do |player|
       points = player[:points]
-      
+      if 
 end
