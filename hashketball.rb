@@ -223,3 +223,19 @@ def most_points_scored
   end
   mvp
 end
+
+def winning_team
+  most_points = 0
+  all_points = []
+  best_team = ""
+  game_hash.each do |place, team|
+    team[:players].each do |player|
+      all_points << player[:points]
+      if all_points > most_points
+        most_points = all_points
+        best_team = team[:team_name]
+      end
+    end
+  end
+   best_team   
+end
