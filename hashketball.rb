@@ -198,6 +198,12 @@ def big_shoe_rebounds
       if attribute == :players
         data.each do |player|
           player.each do |stats|
-            if stats == :shoe
-              stats.max
+            if stats[:shoe].max
+              return player[:rebounds]
+            end
+          end
+        end
+      end
+    end
+  end
 end
