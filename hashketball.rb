@@ -225,14 +225,16 @@ def most_points_scored
 end
 
 def winning_team
+  total_points = 0
   best_team = ""
   game_hash.each do |place, team|
-    sum = 0
-    team[:players].each do |player, stats|
-      sum += stats[:points]
+    team_points = 0
+    team_name = game_hash[place][:team_name]
+    team[:players].each do |player|
+      points = player[:points]
+      team_points += points
     end
-    team[:sum] = sum
-    best_team = team if team[:sum] > best_team_team[:sum]
+    best_team, total_points = team_name, team_points if team_points > total_points
   end
-  best_team[:team_name]
+  return best_team
 end
