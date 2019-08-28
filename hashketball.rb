@@ -215,5 +215,7 @@ def most_points_scored
     team[:players].each do |player, stats|
       mvp ||= stats
       mvp = stats if stats[:points] > mvp[:points]
+    end
+  end
   end
 end
